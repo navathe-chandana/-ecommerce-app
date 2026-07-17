@@ -26,20 +26,18 @@ A full-featured e-commerce platform built with the MERN stack, featuring product
 
 ## Architecture
 
-ecommerce-app/
-├── client/          # React frontend (Vite)
-│   ├── src/
-│   │   ├── api/         # Axios API call functions
-│   │   ├── components/  # Reusable UI components
-│   │   ├── context/     # Auth & Cart global state
-│   │   └── pages/       # Route-level page components
-├── server/          # Express backend
-│   ├── controllers/     # Route logic
-│   ├── models/           # Mongoose schemas
-│   ├── routes/            # API endpoints
-│   ├── middleware/        # Auth & admin guards
-│   └── services/           # Email service
+**client/** — React frontend (Vite)
+- `src/api/` — Axios API call functions
+- `src/components/` — Reusable UI components
+- `src/context/` — Auth & Cart global state
+- `src/pages/` — Route-level page components
 
+**server/** — Express backend
+- `controllers/` — Route logic
+- `models/` — Mongoose schemas
+- `routes/` — API endpoints
+- `middleware/` — Auth & admin guards
+- `services/` — Email service
 
 ## Key Implementation Details
 
