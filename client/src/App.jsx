@@ -13,6 +13,8 @@ import AdminDashboard from "./pages/AdminDashboard";
 import Wishlist from "./pages/Wishlist";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import AdminAddProduct from "./pages/AdminAddProduct";
+import ChatWidget from "./components/ChatWidget";
 
 function App() {
   return (
@@ -78,9 +80,19 @@ function App() {
     </ProtectedRoute>
   }
 />
+<Route
+  path="/admin/add-product"
+  element={
+    <ProtectedRoute adminOnly={true}>
+      <AdminAddProduct />
+    </ProtectedRoute>
+  }
+/>
       </Routes>
       <Footer />
+      <ChatWidget />
     </div>
+  
   );
 }
 
