@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import { getAllOrders, updateOrderStatus } from "../api/adminApi";
-
+import { Link } from "react-router-dom";
 const statusOptions = ["placed", "processing", "shipped", "delivered", "cancelled"];
 
 const AdminDashboard = () => {
@@ -42,6 +42,9 @@ const AdminDashboard = () => {
  return (
   <div className="page-container">
     <h1 className="section-title">Admin — All Orders</h1>
+    <Link to="/admin/add-product" className="btn btn-primary" style={{ marginBottom: "20px", display: "inline-block" }}>
+  + Add New Product
+</Link>
 
     {orders.length === 0 ? (
       <p>No orders yet.</p>
