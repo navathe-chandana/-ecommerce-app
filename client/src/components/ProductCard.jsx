@@ -32,12 +32,17 @@ const ProductCard = ({ product }) => {
         <div className="product-card-img-wrap">
           <img src={product.images[0] || "https://via.placeholder.com/220"} alt={product.name} />
         </div>
-        <div className="product-card-body">
-          <p className="product-card-name">{product.name}</p>
-          <p className="product-card-category">{product.category}</p>
-          <p className="product-card-rating">⭐ {rating} <span>({reviewCount})</span></p>
-          <p className="product-card-price">₹{product.price}</p>
-        </div>
+       <div className="product-card-body">
+  <p className="product-card-name">{product.name}</p>
+  <p className="product-card-category">{product.category}</p>
+  <p className="product-card-stars">{"⭐".repeat(Math.round(rating))} <span>({reviewCount})</span></p>
+  <p className="product-card-price">
+    ₹{product.price}
+    <span className="strike-price">₹{Math.round(product.price * 1.25)}</span>
+    <span className="discount-badge">20% OFF</span>
+  </p>
+  <p className="free-delivery">🚚 Free Delivery</p>
+</div>
       </Link>
     </div>
   );

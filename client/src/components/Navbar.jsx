@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useCart } from "../context/CartContext";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -9,6 +10,8 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const { cartCount } = useCart();
+  const { dark, toggleTheme } = useTheme();
+
 
   const getInitial = (name) => name?.charAt(0).toUpperCase() || "U";
 
@@ -42,7 +45,7 @@ const Navbar = () => {
   🛒 Cart
   {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
 </Link>
-
+            <button className="theme-toggle" onClick={toggleTheme}>{dark ? "☀️" : "🌙"}</button>
             <div className="user-menu" ref={menuRef}>
               <button className="user-menu-trigger" onClick={() => setMenuOpen(!menuOpen)}>
                 <div className="user-avatar">{getInitial(user.name)}</div>
