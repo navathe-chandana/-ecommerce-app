@@ -1,0 +1,4088 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+client/
+  public/
+    favicon.svg
+    icons.svg
+  src/
+    api/
+      adminApi.js
+      aiApi.js
+      authApi.js
+      axiosInstance.js
+      cartApi.js
+      chatApi.js
+      orderApi.js
+      paymentApi.js
+      productApi.js
+      wishlistApi.js
+    assets/
+      hero.png
+      react.svg
+      vite.svg
+    components/
+      ChatWidget.jsx
+      Footer.jsx
+      Navbar.jsx
+      ProductCard.jsx
+      ProtectedRoute.jsx
+      SkeletonCard.jsx
+    context/
+      AuthContext.jsx
+      CartContext.jsx
+      ThemeContext.jsx
+    pages/
+      AdminAddProduct.jsx
+      AdminDashboard.jsx
+      Cart.jsx
+      Checkout.jsx
+      Home.jsx
+      Login.jsx
+      Orders.jsx
+      ProductDetail.jsx
+      Products.jsx
+      Register.jsx
+      Wishlist.jsx
+    App.css
+    App.jsx
+    index.css
+    main.jsx
+  .gitignore
+  eslint.config.js
+  index.html
+  package.json
+  README.md
+  vercel.json
+  vite.config.js
+server/
+  config/
+    cloudinary.js
+  controllers/
+    aiController.js
+    authController.js
+    cartController.js
+    chatController.js
+    orderController.js
+    paymentController.js
+    productController.js
+    wishlistController.js
+  middleware/
+    authMiddleware.js
+  models/
+    Cart.js
+    Order.js
+    Product.js
+    User.js
+    Wishlist.js
+  routes/
+    aiRoutes.js
+    authRoutes.js
+    cartRoutes.js
+    chatRoutes.js
+    orderRoutes.js
+    paymentRoutes.js
+    productRoutes.js
+    wishlistRoutes.js
+  services/
+    emailService.js
+  index.js
+  package.json
+.gitignore
+README.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="client/public/favicon.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
+</file>
+
+<file path="client/public/icons.svg">
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="bluesky-icon" viewBox="0 0 16 17">
+    <g clip-path="url(#bluesky-clip)"><path fill="#08060d" d="M7.75 7.735c-.693-1.348-2.58-3.86-4.334-5.097-1.68-1.187-2.32-.981-2.74-.79C.188 2.065.1 2.812.1 3.251s.241 3.602.398 4.13c.52 1.744 2.367 2.333 4.07 2.145-2.495.37-4.71 1.278-1.805 4.512 3.196 3.309 4.38-.71 4.987-2.746.608 2.036 1.307 5.91 4.93 2.746 2.72-2.746.747-4.143-1.747-4.512 1.702.189 3.55-.4 4.07-2.145.156-.528.397-3.691.397-4.13s-.088-1.186-.575-1.406c-.42-.19-1.06-.395-2.741.79-1.755 1.24-3.64 3.752-4.334 5.099"/></g>
+    <defs><clipPath id="bluesky-clip"><path fill="#fff" d="M.1.85h15.3v15.3H.1z"/></clipPath></defs>
+  </symbol>
+  <symbol id="discord-icon" viewBox="0 0 20 19">
+    <path fill="#08060d" d="M16.224 3.768a14.5 14.5 0 0 0-3.67-1.153c-.158.286-.343.67-.47.976a13.5 13.5 0 0 0-4.067 0c-.128-.306-.317-.69-.476-.976A14.4 14.4 0 0 0 3.868 3.77C1.546 7.28.916 10.703 1.231 14.077a14.7 14.7 0 0 0 4.5 2.306q.545-.748.965-1.587a9.5 9.5 0 0 1-1.518-.74q.191-.14.372-.293c2.927 1.369 6.107 1.369 8.999 0q.183.152.372.294-.723.437-1.52.74.418.838.963 1.588a14.6 14.6 0 0 0 4.504-2.308c.37-3.911-.63-7.302-2.644-10.309m-9.13 8.234c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.894 0 1.614.82 1.599 1.82.001 1-.705 1.82-1.6 1.82m5.91 0c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.893 0 1.614.82 1.599 1.82 0 1-.706 1.82-1.6 1.82"/>
+  </symbol>
+  <symbol id="documentation-icon" viewBox="0 0 21 20">
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="m15.5 13.333 1.533 1.322c.645.555.967.833.967 1.178s-.322.623-.967 1.179L15.5 18.333m-3.333-5-1.534 1.322c-.644.555-.966.833-.966 1.178s.322.623.966 1.179l1.534 1.321"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M17.167 10.836v-4.32c0-1.41 0-2.117-.224-2.68-.359-.906-1.118-1.621-2.08-1.96-.599-.21-1.349-.21-2.848-.21-2.623 0-3.935 0-4.983.369-1.684.591-3.013 1.842-3.641 3.428C3 6.449 3 7.684 3 10.154v2.122c0 2.558 0 3.838.706 4.726q.306.383.713.671c.76.536 1.79.64 3.581.66"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M3 10a2.78 2.78 0 0 1 2.778-2.778c.555 0 1.209.097 1.748-.047.48-.129.854-.503.982-.982.145-.54.048-1.194.048-1.749a2.78 2.78 0 0 1 2.777-2.777"/>
+  </symbol>
+  <symbol id="github-icon" viewBox="0 0 19 19">
+    <path fill="#08060d" fill-rule="evenodd" d="M9.356 1.85C5.05 1.85 1.57 5.356 1.57 9.694a7.84 7.84 0 0 0 5.324 7.44c.387.079.528-.168.528-.376 0-.182-.013-.805-.013-1.454-2.165.467-2.616-.935-2.616-.935-.349-.91-.864-1.143-.864-1.143-.71-.48.051-.48.051-.48.787.051 1.2.805 1.2.805.695 1.194 1.817.857 2.268.649.064-.507.27-.857.49-1.052-1.728-.182-3.545-.857-3.545-3.87 0-.857.31-1.558.8-2.104-.078-.195-.349-1 .077-2.078 0 0 .657-.208 2.14.805a7.5 7.5 0 0 1 1.946-.26c.657 0 1.328.092 1.946.26 1.483-1.013 2.14-.805 2.14-.805.426 1.078.155 1.883.078 2.078.502.546.799 1.247.799 2.104 0 3.013-1.818 3.675-3.558 3.87.284.247.528.714.528 1.454 0 1.052-.012 1.896-.012 2.156 0 .208.142.455.528.377a7.84 7.84 0 0 0 5.324-7.441c.013-4.338-3.48-7.844-7.773-7.844" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="social-icon" viewBox="0 0 20 20">
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M12.5 6.667a4.167 4.167 0 1 0-8.334 0 4.167 4.167 0 0 0 8.334 0"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M2.5 16.667a5.833 5.833 0 0 1 8.75-5.053m3.837.474.513 1.035c.07.144.257.282.414.309l.93.155c.596.1.736.536.307.965l-.723.73a.64.64 0 0 0-.152.531l.207.903c.164.715-.213.991-.84.618l-.872-.52a.63.63 0 0 0-.577 0l-.872.52c-.624.373-1.003.094-.84-.618l.207-.903a.64.64 0 0 0-.152-.532l-.723-.729c-.426-.43-.289-.864.306-.964l.93-.156a.64.64 0 0 0 .412-.31l.513-1.034c.28-.562.735-.562 1.012 0"/>
+  </symbol>
+  <symbol id="x-icon" viewBox="0 0 19 19">
+    <path fill="#08060d" fill-rule="evenodd" d="M1.893 1.98c.052.072 1.245 1.769 2.653 3.77l2.892 4.114c.183.261.333.48.333.486s-.068.089-.152.183l-.522.593-.765.867-3.597 4.087c-.375.426-.734.834-.798.905a1 1 0 0 0-.118.148c0 .01.236.017.664.017h.663l.729-.83c.4-.457.796-.906.879-.999a692 692 0 0 0 1.794-2.038c.034-.037.301-.34.594-.675l.551-.624.345-.392a7 7 0 0 1 .34-.374c.006 0 .93 1.306 2.052 2.903l2.084 2.965.045.063h2.275c1.87 0 2.273-.003 2.266-.021-.008-.02-1.098-1.572-3.894-5.547-2.013-2.862-2.28-3.246-2.273-3.266.008-.019.282-.332 2.085-2.38l2-2.274 1.567-1.782c.022-.028-.016-.03-.65-.03h-.674l-.3.342a871 871 0 0 1-1.782 2.025c-.067.075-.405.458-.75.852a100 100 0 0 1-.803.91c-.148.172-.299.344-.99 1.127-.304.343-.32.358-.345.327-.015-.019-.904-1.282-1.976-2.808L6.365 1.85H1.8zm1.782.91 8.078 11.294c.772 1.08 1.413 1.973 1.425 1.984.016.017.241.02 1.05.017l1.03-.004-2.694-3.766L7.796 5.75 5.722 2.852l-1.039-.004-1.039-.004z" clip-rule="evenodd"/>
+  </symbol>
+</svg>
+</file>
+
+<file path="client/src/api/adminApi.js">
+import axiosInstance from "./axiosInstance";
+
+export const getAllOrders = () => axiosInstance.get("/orders");
+export const updateOrderStatus = (orderId, orderStatus) =>
+  axiosInstance.put(`/orders/${orderId}/status`, { orderStatus });
+</file>
+
+<file path="client/src/api/aiApi.js">
+import axiosInstance from "./axiosInstance";
+
+export const generateDescription = (data) => axiosInstance.post("/ai/generate-description", data);
+</file>
+
+<file path="client/src/api/authApi.js">
+import axiosInstance from "./axiosInstance";
+
+export const registerUser = (data) => axiosInstance.post("/auth/register", data);
+export const loginUser = (data) => axiosInstance.post("/auth/login", data);
+</file>
+
+<file path="client/src/api/cartApi.js">
+import axiosInstance from "./axiosInstance";
+
+export const getCart = () => axiosInstance.get("/cart");
+export const addToCart = (data) => axiosInstance.post("/cart/add", data);
+export const removeFromCart = (productId) => axiosInstance.delete(`/cart/${productId}`);
+</file>
+
+<file path="client/src/api/chatApi.js">
+import axiosInstance from "./axiosInstance";
+
+export const sendChatMessage = (data) => axiosInstance.post("/chat", data);
+</file>
+
+<file path="client/src/api/orderApi.js">
+import axiosInstance from "./axiosInstance";
+
+export const createOrder = (data) => axiosInstance.post("/orders", data);
+export const getMyOrders = () => axiosInstance.get("/orders/my-orders");
+</file>
+
+<file path="client/src/api/paymentApi.js">
+import axiosInstance from "./axiosInstance";
+
+export const createRazorpayOrder = (data) => axiosInstance.post("/payment/create-order", data);
+export const verifyPayment = (data) => axiosInstance.post("/payment/verify", data);
+</file>
+
+<file path="client/src/api/wishlistApi.js">
+import axiosInstance from "./axiosInstance";
+
+export const getWishlist = () => axiosInstance.get("/wishlist");
+export const toggleWishlist = (productId) => axiosInstance.post("/wishlist/toggle", { productId });
+</file>
+
+<file path="client/src/assets/react.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
+</file>
+
+<file path="client/src/assets/vite.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
+</file>
+
+<file path="client/src/components/ChatWidget.jsx">
+import { useState, useRef, useEffect } from "react";
+import { sendChatMessage } from "../api/chatApi";
+
+const ChatWidget = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState([
+    { role: "assistant", content: "Hi! 👋 I'm here to help with orders, payments, or anything else. What can I do for you?" },
+  ]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, isOpen]);
+
+  const handleSend = async (e) => {
+    e.preventDefault();
+    if (!input.trim() || loading) return;
+
+    const userMessage = { role: "user", content: input };
+    const newMessages = [...messages, userMessage];
+    setMessages(newMessages);
+    setInput("");
+    setLoading(true);
+
+    try {
+      // Send conversation history (excluding the initial greeting) for context
+      const history = newMessages.slice(1).map((m) => ({ role: m.role, content: m.content }));
+      const res = await sendChatMessage({ message: input, history: history.slice(0, -1) });
+      setMessages([...newMessages, { role: "assistant", content: res.data.reply }]);
+    } catch (error) {
+      setMessages([...newMessages, { role: "assistant", content: "Sorry, I'm having trouble responding right now. Please try again." }]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <>
+      <button className="chat-bubble" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? "✕" : "💬"}
+      </button>
+
+      {isOpen && (
+        <div className="chat-window">
+          <div className="chat-header">
+            <div className="chat-header-avatar">🤖</div>
+            <div>
+              <p className="chat-header-title">Support Assistant</p>
+              <p className="chat-header-subtitle">Usually replies instantly</p>
+            </div>
+          </div>
+
+          <div className="chat-messages">
+            {messages.map((msg, i) => (
+              <div key={i} className={`chat-message ${msg.role === "user" ? "chat-message-user" : "chat-message-assistant"}`}>
+                {msg.content}
+              </div>
+            ))}
+            {loading && (
+              <div className="chat-message chat-message-assistant chat-typing">
+                <span></span><span></span><span></span>
+              </div>
+            )}
+            <div ref={messagesEndRef} />
+          </div>
+
+          <form className="chat-input-form" onSubmit={handleSend}>
+            <input
+              type="text"
+              placeholder="Type a message..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              disabled={loading}
+            />
+            <button type="submit" disabled={loading || !input.trim()}>➤</button>
+          </form>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default ChatWidget;
+</file>
+
+<file path="client/src/components/ProtectedRoute.jsx">
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+
+const ProtectedRoute = ({ children, adminOnly = false }) => {
+  const { user, loading } = useAuth();
+
+  if (loading) return <p>Loading...</p>;
+
+  if (!user) return <Navigate to="/login" replace />;
+
+  if (adminOnly && user.role !== "admin") return <Navigate to="/" replace />;
+
+  return children;
+};
+
+export default ProtectedRoute;
+</file>
+
+<file path="client/src/components/SkeletonCard.jsx">
+const SkeletonCard = () => {
+  return (
+    <div className="product-card skeleton-card">
+      <div className="skeleton skeleton-img"></div>
+      <div className="product-card-body">
+        <div className="skeleton skeleton-line" style={{ width: "80%" }}></div>
+        <div className="skeleton skeleton-line" style={{ width: "40%" }}></div>
+        <div className="skeleton skeleton-line" style={{ width: "50%" }}></div>
+      </div>
+    </div>
+  );
+};
+
+export default SkeletonCard;
+</file>
+
+<file path="client/src/context/AuthContext.jsx">
+import { createContext, useContext, useState, useEffect } from "react";
+
+const AuthContext = createContext();
+
+export const useAuth = () => useContext(AuthContext);
+
+export const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+    setLoading(false);
+  }, []);
+
+  const login = (userData) => {
+    setUser(userData);
+    localStorage.setItem("user", JSON.stringify(userData));
+    localStorage.setItem("token", userData.token);
+  };
+
+  const logout = () => {
+    setUser(null);
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+  };
+
+  return (
+    <AuthContext.Provider value={{ user, login, logout, loading }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+</file>
+
+<file path="client/src/context/CartContext.jsx">
+import { createContext, useContext, useState, useEffect } from "react";
+import { getCart } from "../api/cartApi";
+import { useAuth } from "./AuthContext";
+
+const CartContext = createContext();
+export const useCart = () => useContext(CartContext);
+
+export const CartProvider = ({ children }) => {
+  const [cartCount, setCartCount] = useState(0);
+  const { user } = useAuth();
+
+  const refreshCartCount = async () => {
+    if (!user) {
+      setCartCount(0);
+      return;
+    }
+    try {
+      const res = await getCart();
+      const count = res.data.items?.reduce((sum, item) => sum + item.quantity, 0) || 0;
+      setCartCount(count);
+    } catch {
+      setCartCount(0);
+    }
+  };
+
+  useEffect(() => {
+    refreshCartCount();
+  }, [user]);
+
+  return (
+    <CartContext.Provider value={{ cartCount, refreshCartCount }}>
+      {children}
+    </CartContext.Provider>
+  );
+};
+</file>
+
+<file path="client/src/context/ThemeContext.jsx">
+import { createContext, useContext, useState, useEffect } from "react";
+
+const ThemeContext = createContext();
+export const useTheme = () => useContext(ThemeContext);
+
+export const ThemeProvider = ({ children }) => {
+  const [dark, setDark] = useState(localStorage.getItem("theme") === "dark");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    localStorage.setItem("theme", dark ? "dark" : "light");
+  }, [dark]);
+
+  return (
+    <ThemeContext.Provider value={{ dark, toggleTheme: () => setDark(!dark) }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+</file>
+
+<file path="client/src/pages/AdminAddProduct.jsx">
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { createProduct } from "../api/productApi";
+import { generateDescription } from "../api/aiApi";
+// import { Link } from "react-router-dom";
+
+const AdminAddProduct = () => {
+  const [form, setForm] = useState({
+    name: "",
+    description: "",
+    price: "",
+    category: "electronics",
+    stock: "",
+  });
+  const [image, setImage] = useState(null);
+  const [generating, setGenerating] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleGenerateDescription = async () => {
+    if (!form.name) {
+      toast.error("Enter a product name first");
+      return;
+    }
+    setGenerating(true);
+    try {
+      const res = await generateDescription({ name: form.name, category: form.category });
+      setForm({ ...form, description: res.data.description });
+      toast.success("Description generated!");
+    } catch (error) {
+      toast.error("Failed to generate description");
+    } finally {
+      setGenerating(false);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!image) {
+      toast.error("Please select an image");
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const formData = new FormData();
+      Object.entries(form).forEach(([key, value]) => formData.append(key, value));
+      formData.append("images", image);
+
+      await createProduct(formData);
+      toast.success("Product created!");
+      setForm({ name: "", description: "", price: "", category: "electronics", stock: "" });
+      setImage(null);
+      e.target.reset();
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Failed to create product");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="page-container">
+      <h1 className="section-title">Add New Product</h1>
+      
+      <div className="form-container" style={{ margin: 0, maxWidth: "500px" }}>
+        <form onSubmit={handleSubmit}>
+          <input
+            className="form-input"
+            type="text"
+            name="name"
+            placeholder="Product Name"
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
+
+          <div style={{ position: "relative" }}>
+            <textarea
+              className="form-input"
+              name="description"
+              placeholder="Description"
+              value={form.description}
+              onChange={handleChange}
+              rows={4}
+              required
+              style={{ resize: "vertical" }}
+            />
+            <button
+              type="button"
+              onClick={handleGenerateDescription}
+              disabled={generating}
+              className="btn btn-outline"
+              style={{ fontSize: "12px", padding: "6px 12px", marginBottom: "14px" }}
+            >
+              {generating ? "Generating..." : "✨ Generate with AI"}
+            </button>
+          </div>
+
+          <input
+            className="form-input"
+            type="number"
+            name="price"
+            placeholder="Price"
+            value={form.price}
+            onChange={handleChange}
+            required
+          />
+
+          <select
+            className="form-input"
+            name="category"
+            value={form.category}
+            onChange={handleChange}
+          >
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="books">Books</option>
+          </select>
+
+          <input
+            className="form-input"
+            type="number"
+            name="stock"
+            placeholder="Stock"
+            value={form.stock}
+            onChange={handleChange}
+            required
+          />
+
+          <input
+            className="form-input"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            onChange={(e) => setImage(e.target.files[0])}
+            required
+          />
+
+          <button className="btn btn-primary" type="submit" disabled={submitting} style={{ width: "100%" }}>
+            {submitting ? "Creating..." : "Create Product"}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default AdminAddProduct;
+</file>
+
+<file path="client/src/pages/Cart.jsx">
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import { getCart, addToCart, removeFromCart } from "../api/cartApi";
+import { useCart } from "../context/CartContext";
+
+const Cart = () => {
+  const [cart, setCart] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+  const { refreshCartCount } = useCart();
+
+  useEffect(() => {
+    fetchCart();
+  }, []);
+
+  const fetchCart = async () => {
+    setLoading(true);
+    try {
+      const res = await getCart();
+      setCart(res.data);
+    } catch (error) {
+      toast.error("Failed to load cart");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleQuantityChange = async (productId, newQuantity) => {
+    if (newQuantity < 1) return;
+    try {
+      const res = await addToCart({ productId, quantity: newQuantity });
+      setCart(res.data);
+      refreshCartCount()
+    } catch (error) {
+      toast.error("Failed to update quantity");
+    }
+  };
+
+  const handleRemove = async (productId) => {
+    try {
+      const res = await removeFromCart(productId);
+      setCart(res.data);
+      toast.success("Item removed");
+      refreshCartCount()
+    } catch (error) {
+      toast.error("Failed to remove item");
+    }
+  };
+
+  const calculateTotal = () => {
+    if (!cart || !cart.items) return 0;
+    return cart.items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+  };
+
+  if (loading) return <div className="page-container"><div className="spinner"></div></div>;
+  if (!cart || cart.items.length === 0) {
+    return (
+    <div className="page-container">
+      <h2>Your cart is empty</h2>
+      <Link to="/products">Browse products</Link>
+    </div>
+  );
+}
+
+  return (
+  <div className="page-container">
+    <h1 className="section-title">Your Cart</h1>
+
+    {cart.items.map((item) => (
+      <div key={item._id} className="cart-item">
+        <img
+          src={item.product.images[0] || "https://via.placeholder.com/80"}
+          alt={item.product.name}
+        />
+
+        <div style={{ flex: 1 }}>
+          <h3 style={{ margin: "0 0 5px" }}>{item.product.name}</h3>
+          <p style={{ margin: 0, color: "var(--text-muted)" }}>₹{item.product.price}</p>
+        </div>
+
+        <div className="qty-control">
+          <button onClick={() => handleQuantityChange(item.product._id, item.quantity - 1)}>-</button>
+          <span>{item.quantity}</span>
+          <button onClick={() => handleQuantityChange(item.product._id, item.quantity + 1)}>+</button>
+        </div>
+
+        <p style={{ width: "80px", textAlign: "right", fontWeight: "bold" }}>
+          ₹{item.product.price * item.quantity}
+        </p>
+
+        <button className="btn-danger" onClick={() => handleRemove(item.product._id)}>
+          Remove
+        </button>
+      </div>
+    ))}
+
+    <div className="cart-summary">
+  <h2>Total: ₹{calculateTotal()}</h2>
+  <button className="btn btn-primary" onClick={() => navigate("/checkout")}>
+    Proceed to Checkout
+  </button>
+</div>
+  </div>
+);
+};
+
+export default Cart;
+</file>
+
+<file path="client/src/pages/Checkout.jsx">
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import { getCart } from "../api/cartApi";
+import { createRazorpayOrder, verifyPayment } from "../api/paymentApi";
+import { createOrder } from "../api/orderApi";
+import { useAuth } from "../context/AuthContext";
+
+const Checkout = () => {
+  const [cart, setCart] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [processing, setProcessing] = useState(false);
+  const { user } = useAuth();
+  const navigate = useNavigate();
+
+  const [address, setAddress] = useState({
+    fullName: user?.name || "",
+    address: "",
+    city: "",
+    postalCode: "",
+    country: "India",
+    phone: "",
+  });
+
+  useEffect(() => {
+    fetchCart();
+  }, []);
+
+  const fetchCart = async () => {
+    try {
+      const res = await getCart();
+      setCart(res.data);
+    } catch (error) {
+      toast.error("Failed to load cart");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const calculateTotal = () => {
+    if (!cart || !cart.items) return 0;
+    return cart.items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+  };
+
+  const handleAddressChange = (e) => {
+    setAddress({ ...address, [e.target.name]: e.target.value });
+  };
+
+  const handlePayment = async (e) => {
+    e.preventDefault();
+    setProcessing(true);
+
+    try {
+      const total = calculateTotal();
+
+      // Step 1: Create Razorpay order on our backend
+      const { data: razorpayOrder } = await createRazorpayOrder({ amount: total });
+
+      // Step 2: Open Razorpay checkout popup
+      const options = {
+        key: razorpayOrder.keyId,
+        amount: razorpayOrder.amount,
+        currency: razorpayOrder.currency,
+        name: "Ecommerce Store",
+        description: "Order Payment",
+        order_id: razorpayOrder.orderId,
+        handler: async (response) => {
+          try {
+            // Step 3: Verify payment signature on our backend
+            const verifyRes = await verifyPayment({
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature: response.razorpay_signature,
+            });
+
+            if (verifyRes.data.verified) {
+              // Step 4: Create the actual order in our DB
+              await createOrder({
+                shippingAddress: address,
+                paymentId: response.razorpay_payment_id,
+              });
+
+              toast.success("Order placed successfully!");
+              navigate("/orders");
+            } else {
+              toast.error("Payment verification failed");
+            }
+          } catch (error) {
+            toast.error("Something went wrong after payment");
+          }
+        },
+        prefill: {
+          name: user.name,
+          email: user.email,
+        },
+        theme: { color: "#000000" },
+      };
+
+      const razorpay = new window.Razorpay(options);
+      razorpay.open();
+    } catch (error) {
+      toast.error("Failed to initiate payment");
+    } finally {
+      setProcessing(false);
+    }
+  };
+
+  if (loading) return <p style={{ padding: "30px" }}>Loading...</p>;
+  if (!cart || cart.items.length === 0) return <p style={{ padding: "30px" }}>Your cart is empty.</p>;
+
+  return (
+  <div className="page-container" style={{ maxWidth: "500px" }}>
+    <h1 className="section-title">Checkout</h1>
+
+    <div className="form-container" style={{ margin: 0, maxWidth: "100%" }}>
+      <h3 style={{ marginBottom: "16px" }}>Shipping Address</h3>
+      <form onSubmit={handlePayment}>
+        <input className="form-input" type="text" name="fullName" placeholder="Full Name" value={address.fullName} onChange={handleAddressChange} required />
+        <input className="form-input" type="text" name="address" placeholder="Address" value={address.address} onChange={handleAddressChange} required />
+        <input className="form-input" type="text" name="city" placeholder="City" value={address.city} onChange={handleAddressChange} required />
+        <input className="form-input" type="text" name="postalCode" placeholder="Postal Code" value={address.postalCode} onChange={handleAddressChange} required />
+        <input className="form-input" type="text" name="phone" placeholder="Phone" value={address.phone} onChange={handleAddressChange} required />
+
+        <h3 style={{ margin: "20px 0" }}>Total: ₹{calculateTotal()}</h3>
+
+        <button className="btn btn-primary" type="submit" disabled={processing} style={{ width: "100%" }}>
+          {processing ? "Processing..." : "Pay Now"}
+        </button>
+      </form>
+    </div>
+  </div>
+);
+};
+
+export default Checkout;
+</file>
+
+<file path="client/src/pages/Login.jsx">
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { loginUser } from "../api/authApi";
+import { useAuth } from "../context/AuthContext";
+
+const Login = () => {
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const res = await loginUser(formData);
+      login(res.data);
+      toast.success("Logged in successfully!");
+      navigate("/");
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Login failed");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+return (
+  <div className="form-container">
+    <h2>Login</h2>
+    <form onSubmit={handleSubmit}>
+      <input
+        className="form-input"
+        type="email"
+        name="email"
+        placeholder="Email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+      <input
+        className="form-input"
+        type="password"
+        name="password"
+        placeholder="Password"
+        value={formData.password}
+        onChange={handleChange}
+        required
+      />
+      <button className="btn btn-primary" type="submit" disabled={loading} style={{ width: "100%" }}>
+        {loading ? "Logging in..." : "Login"}
+      </button>
+    </form>
+    <p className="form-link">Don't have an account? <Link to="/register">Register</Link></p>
+  </div>
+);
+};
+
+export default Login;
+</file>
+
+<file path="client/src/pages/Orders.jsx">
+import { useState, useEffect } from "react";
+import { getMyOrders } from "../api/orderApi";
+
+const Orders = () => {
+  const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchOrders();
+  }, []);
+
+  const fetchOrders = async () => {
+    try {
+      const res = await getMyOrders();
+      setOrders(res.data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) return <div className="page-container"><div className="spinner"></div></div>;
+  if (orders.length === 0) return <div className="page-container"><p>You haven't placed any orders yet.</p></div>;
+
+  return (
+  <div className="page-container">
+    <h1 className="section-title">My Orders</h1>
+
+    {orders.map((order) => (
+      <div key={order._id} className="order-card">
+        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "14px" }}>
+          <div>
+            <strong>Order #{order._id.slice(-8)}</strong>
+            <p style={{ margin: "5px 0", color: "var(--text-muted)", fontSize: "13px" }}>
+              {new Date(order.createdAt).toLocaleDateString()}
+            </p>
+          </div>
+          <span className="status-badge">{order.orderStatus}</span>
+        </div>
+
+        {order.items.map((item) => (
+          <div key={item._id} style={{ display: "flex", gap: "15px", padding: "8px 0" }}>
+            <img
+              src={item.image}
+              alt={item.name}
+              style={{ width: "60px", height: "60px", objectFit: "cover", borderRadius: "6px" }}
+            />
+            <div>
+              <p style={{ margin: 0 }}>{item.name}</p>
+              <p style={{ margin: 0, color: "var(--text-muted)" }}>
+                Qty: {item.quantity} × ₹{item.price}
+              </p>
+            </div>
+          </div>
+        ))}
+
+        <p style={{ textAlign: "right", fontWeight: "bold", marginTop: "10px" }}>
+          Total: ₹{order.totalAmount}
+        </p>
+      </div>
+    ))}
+  </div>
+);
+};
+
+export default Orders;
+</file>
+
+<file path="client/src/pages/ProductDetail.jsx">
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { getProductById } from "../api/productApi";
+import { addToCart } from "../api/cartApi";
+import { useAuth } from "../context/AuthContext";
+import { useCart } from "../context/CartContext";
+// import { useParams } from "react-router-dom";
+
+const ProductDetail = () => {
+  const { id } = useParams();
+  const { user } = useAuth();
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [quantity, setQuantity] = useState(1);
+  const [adding, setAdding] = useState(false);
+  const { refreshCartCount } = useCart();
+
+  useEffect(() => {
+    fetchProduct();
+  }, [id]);
+
+  const fetchProduct = async () => {
+    setLoading(true);
+    try {
+      const res = await getProductById(id);
+      setProduct(res.data);
+    } catch (error) {
+      toast.error("Product not found");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleAddToCart = async () => {
+    if (!user) {
+      toast.error("Please login to add items to cart");
+      return;
+    }
+    setAdding(true);
+    try {
+      await addToCart({ productId: product._id, quantity });
+      toast.success("Added to cart!");
+      await refreshCartCount();
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Failed to add to cart");
+    } finally {
+      setAdding(false);
+    }
+  };
+
+ if (loading) return <div className="page-container"><div className="spinner"></div></div>;
+if (!product) return <div className="page-container"><p>Product not found.</p></div>;
+
+  
+
+ return (
+  <div className="page-container">
+    <div className="breadcrumbs">
+  <Link to="/">Home</Link> / <Link to="/products">Products</Link> / <span>{product.name}</span>
+</div>
+    <div className="detail-layout">
+      <img
+        className="detail-image"
+        src={product.images[0] || "https://via.placeholder.com/420"}
+        alt={product.name}
+      />
+
+      <div className="detail-info">
+        <p className="product-card-category">{product.category}</p>
+        <h1>{product.name}</h1>
+        <p className="detail-price">₹{product.price}</p>
+        <p style={{ color: "var(--text-muted)", lineHeight: 1.6 }}>{product.description}</p>
+
+        <span className={`stock-badge ${product.stock > 0 ? "stock-in" : "stock-out"}`}>
+          {product.stock > 0 ? `In stock (${product.stock} available)` : "Out of stock"}
+        </span>
+
+        {product.stock > 0 && (
+          <div className="qty-selector">
+            <label>Quantity:</label>
+            <input
+              type="number"
+              min="1"
+              max={product.stock}
+              value={quantity}
+              onChange={(e) => setQuantity(Number(e.target.value))}
+            />
+          </div>
+        )}
+
+        <div>
+          <button
+            className="btn btn-primary"
+            onClick={handleAddToCart}
+            disabled={product.stock === 0 || adding}
+          >
+            {adding ? "Adding..." : "Add to Cart"}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+};
+
+export default ProductDetail;
+</file>
+
+<file path="client/src/pages/Products.jsx">
+import { useState, useEffect } from "react";
+import { getProducts } from "../api/productApi";
+import ProductCard from "../components/ProductCard";
+import SkeletonCard from "../components/SkeletonCard";
+
+const Products = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("");
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+
+  useEffect(() => {
+    fetchProducts();
+  }, [search, category, page]);
+
+  const fetchProducts = async () => {
+    setLoading(true);
+    try {
+      const res = await getProducts({ search, category, page, limit: 8 });
+      setProducts(res.data.products);
+      setTotalPages(res.data.totalPages);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  return (
+  <div className="page-container">
+    <h1 className="section-title">Products</h1>
+
+  <div className="filter-bar">
+  <input
+    type="text"
+    placeholder="Search products..."
+    value={search}
+    onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+  />
+</div>
+
+<div className="category-pills">
+  {["", "electronics", "clothing", "books"].map((cat) => (
+    <button
+      key={cat}
+      className={`category-pill ${category === cat ? "active" : ""}`}
+      onClick={() => { setCategory(cat); setPage(1); }}
+    >
+      {cat === "" ? "All" : cat.charAt(0).toUpperCase() + cat.slice(1)}
+    </button>
+  ))}
+</div>
+
+{loading ? (
+  <div className="product-grid">
+    {Array.from({ length: 8 }).map((_, i) => <SkeletonCard key={i} />)}
+  </div>
+) : (
+      <div className="product-grid">
+        {products.map((product) => <ProductCard key={product._id} product={product} />)}
+      </div>
+    )}
+
+    <div style={{ marginTop: "24px", display: "flex", gap: "10px", alignItems: "center" }}>
+      <button className="btn btn-outline" disabled={page === 1} onClick={() => setPage(page - 1)}>Previous</button>
+      <span>Page {page} of {totalPages}</span>
+      <button className="btn btn-outline" disabled={page === totalPages || totalPages === 0} onClick={() => setPage(page + 1)}>Next</button>
+    </div>
+  </div>
+);
+  
+};
+
+export default Products;
+</file>
+
+<file path="client/src/pages/Register.jsx">
+import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { registerUser } from "../api/authApi";
+import { useAuth } from "../context/AuthContext";
+
+const Register = () => {
+  const [formData, setFormData] = useState({ name: "", email: "", password: "" });
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const res = await registerUser(formData);
+      login(res.data);
+      toast.success("Account created successfully!");
+      navigate("/");
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Registration failed");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+  <div className="form-container">
+    <h2>Register</h2>
+    <form onSubmit={handleSubmit}>
+      <input
+        className="form-input"
+        type="text"
+        name="name"
+        placeholder="Name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+      <input
+        className="form-input"
+        type="email"
+        name="email"
+        placeholder="Email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+      <input
+        className="form-input"
+        type="password"
+        name="password"
+        placeholder="Password"
+        value={formData.password}
+        onChange={handleChange}
+        required
+      />
+      <button className="btn btn-primary" type="submit" disabled={loading} style={{ width: "100%" }}>
+        {loading ? "Creating account..." : "Register"}
+      </button>
+    </form>
+    <p className="form-link">Already have an account? <Link to="/login">Login</Link></p>
+  </div>
+);
+};
+
+export default Register;
+</file>
+
+<file path="client/src/pages/Wishlist.jsx">
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { getWishlist, toggleWishlist } from "../api/wishlistApi";
+import ProductCard from "../components/ProductCard";
+
+const Wishlist = () => {
+  const [wishlist, setWishlist] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchWishlist();
+  }, []);
+
+  const fetchWishlist = async () => {
+    try {
+      const res = await getWishlist();
+      setWishlist(res.data);
+    } catch (error) {
+      toast.error("Failed to load wishlist");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleRemove = async (productId) => {
+    try {
+      const res = await toggleWishlist(productId);
+      setWishlist(res.data);
+      toast.success("Removed from wishlist");
+    } catch (error) {
+      toast.error("Failed to update wishlist");
+    }
+  };
+
+ if (loading) return <div className="page-container"><div className="spinner"></div></div>;
+
+  if (!wishlist || wishlist.products.length === 0) {
+    return (
+      <div className="page-container">
+        <h2>Your wishlist is empty</h2>
+        <Link to="/products">Browse products</Link>
+      </div>
+    );
+  }
+
+  return (
+       <div className="page-container">
+  <h1 className="section-title">My Wishlist</h1>
+  <div className="product-grid">
+        {wishlist.products.map((product) => (
+          <div key={product._id}>
+            <ProductCard product={product} />
+            <button
+              onClick={() => handleRemove(product._id)}
+              style={{ marginTop: "8px", color: "red", width: "220px" }}
+            >
+              Remove from Wishlist
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Wishlist;
+</file>
+
+<file path="client/src/App.css">
+
+</file>
+
+<file path="client/eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      globals: globals.browser,
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+  },
+])
+</file>
+
+<file path="client/index.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>client</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+</file>
+
+<file path="client/package.json">
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.18.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.18.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "eslint": "^10.6.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.7.0",
+    "vite": "^8.1.1"
+  }
+}
+</file>
+
+<file path="client/README.md">
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+</file>
+
+<file path="client/vercel.json">
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+</file>
+
+<file path="client/vite.config.js">
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})
+</file>
+
+<file path="server/config/cloudinary.js">
+import { v2 as cloudinary } from "cloudinary";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+const storage = new CloudinaryStorage({
+  cloudinary,
+  params: {
+    folder: "ecommerce-products",
+    allowed_formats: ["jpg", "jpeg", "png", "webp"],
+  },
+});
+
+export { cloudinary, storage };
+</file>
+
+<file path="server/controllers/aiController.js">
+import Groq from "groq-sdk";
+import dotenv from "dotenv";
+dotenv.config();
+
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+
+export const generateDescription = async (req, res) => {
+  try {
+    const { name, category } = req.body;
+
+    if (!name) {
+      return res.status(400).json({ message: "Product name is required" });
+    }
+
+    const prompt = `Write a compelling, concise e-commerce product description (2-3 sentences) for a product called "${name}"${category ? ` in the "${category}" category` : ""}. Focus on benefits and appeal to shoppers. Do not use markdown formatting.`;
+
+    const completion = await groq.chat.completions.create({
+      messages: [{ role: "user", content: prompt }],
+      model: "llama-3.1-8b-instant",
+    });
+
+    const description = completion.choices[0].message.content;
+
+    res.json({ description });
+  } catch (error) {
+    console.error("AI generation error:", error);
+    res.status(500).json({ message: "Failed to generate description" });
+  }
+};
+</file>
+
+<file path="server/controllers/authController.js">
+import User from "../models/User.js";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+
+// Generate JWT token
+const generateToken = (userId) => {
+  return jwt.sign({ id: userId }, process.env.JWT_SECRET, {
+    expiresIn: "7d",
+  });
+};
+
+// REGISTER
+export const registerUser = async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: "Email already registered" });
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    const user = await User.create({
+      name,
+      email,
+      password: hashedPassword,
+    });
+
+    const token = generateToken(user._id);
+
+    res.status(201).json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+      token,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// LOGIN
+export const loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(400).json({ message: "Invalid email or password" });
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(400).json({ message: "Invalid email or password" });
+    }
+
+    const token = generateToken(user._id);
+
+    res.status(200).json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+      token,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+</file>
+
+<file path="server/controllers/cartController.js">
+import Cart from "../models/Cart.js";
+
+// GET user's cart
+export const getCart = async (req, res) => {
+  try {
+    let cart = await Cart.findOne({ user: req.user._id }).populate("items.product");
+
+    if (!cart) {
+      cart = await Cart.create({ user: req.user._id, items: [] });
+    }
+
+    res.json(cart);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// ADD or UPDATE item in cart
+export const addToCart = async (req, res) => {
+  try {
+    const { productId, quantity } = req.body;
+
+    let cart = await Cart.findOne({ user: req.user._id });
+
+    if (!cart) {
+      cart = await Cart.create({ user: req.user._id, items: [] });
+    }
+
+    const existingItem = cart.items.find(
+      (item) => item.product.toString() === productId
+    );
+
+    if (existingItem) {
+      existingItem.quantity = quantity;
+    } else {
+      cart.items.push({ product: productId, quantity });
+    }
+
+    await cart.save();
+    const populatedCart = await cart.populate("items.product");
+    res.json(populatedCart);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// REMOVE item from cart
+export const removeFromCart = async (req, res) => {
+  try {
+    const { productId } = req.params;
+
+    const cart = await Cart.findOne({ user: req.user._id });
+    if (!cart) return res.status(404).json({ message: "Cart not found" });
+
+    cart.items = cart.items.filter(
+      (item) => item.product.toString() !== productId
+    );
+
+    await cart.save();
+    const populatedCart = await cart.populate("items.product");
+    res.json(populatedCart);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// SYNC local cart (guest cart from localStorage) into DB after login
+export const syncCart = async (req, res) => {
+  try {
+    const { items } = req.body; // [{ productId, quantity }, ...]
+
+    let cart = await Cart.findOne({ user: req.user._id });
+    if (!cart) {
+      cart = await Cart.create({ user: req.user._id, items: [] });
+    }
+
+    items.forEach(({ productId, quantity }) => {
+      const existingItem = cart.items.find(
+        (item) => item.product.toString() === productId
+      );
+      if (existingItem) {
+        existingItem.quantity = Math.max(existingItem.quantity, quantity);
+      } else {
+        cart.items.push({ product: productId, quantity });
+      }
+    });
+
+    await cart.save();
+    const populatedCart = await cart.populate("items.product");
+    res.json(populatedCart);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+</file>
+
+<file path="server/controllers/chatController.js">
+import Groq from "groq-sdk";
+import Order from "../models/Order.js";
+import dotenv from "dotenv";
+dotenv.config();
+
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+
+const STORE_CONTEXT = `
+You are a helpful customer support assistant for "Ecommerce Store", an online shop selling electronics, clothing, and books.
+
+Store policies:
+- Payment methods: Credit/debit cards, UPI, netbanking via Razorpay
+- Shipping: Orders are processed within 1-2 business days
+- Order statuses: placed → processing → shipped → delivered
+- Returns: Not currently supported (mention this politely if asked)
+- Contact: For urgent issues, tell users to check their order status on the "My Orders" page
+
+Keep responses short (2-4 sentences), friendly, and helpful. If you don't know something specific, say so honestly rather than making it up.
+`;
+
+export const chatWithSupport = async (req, res) => {
+  try {
+    const { message, history } = req.body;
+    let orderContext = "";
+
+    // If the user is logged in, include their recent order info
+    if (req.user) {
+      const orders = await Order.find({ user: req.user._id })
+        .sort({ createdAt: -1 })
+        .limit(5);
+
+      if (orders.length > 0) {
+        orderContext = "\n\nThis customer's recent orders:\n" + orders
+          .map((o) => `- Order #${o._id.toString().slice(-8)}: ${o.orderStatus}, total ₹${o.totalAmount}, placed ${new Date(o.createdAt).toLocaleDateString()}`)
+          .join("\n");
+      } else {
+        orderContext = "\n\nThis customer has no orders yet.";
+      }
+    }
+
+    const messages = [
+      { role: "system", content: STORE_CONTEXT + orderContext },
+      ...(history || []),
+      { role: "user", content: message },
+    ];
+
+    const completion = await groq.chat.completions.create({
+      messages,
+      model: "llama-3.1-8b-instant",
+    });
+
+    const reply = completion.choices[0].message.content;
+    res.json({ reply });
+  } catch (error) {
+    console.error("Chat error:", error);
+    res.status(500).json({ message: "Failed to get response" });
+  }
+};
+</file>
+
+<file path="server/controllers/orderController.js">
+import Order from "../models/Order.js";
+import Cart from "../models/Cart.js";
+import { sendOrderEmail } from "../services/emailService.js";
+
+// CREATE order (after successful payment)
+export const createOrder = async (req, res) => {
+  try {
+    const { shippingAddress, paymentId } = req.body;
+
+    const cart = await Cart.findOne({ user: req.user._id }).populate("items.product");
+
+    if (!cart || cart.items.length === 0) {
+      return res.status(400).json({ message: "Cart is empty" });
+    }
+
+    const orderItems = cart.items.map((item) => ({
+      product: item.product._id,
+      name: item.product.name,
+      price: item.product.price,
+      quantity: item.quantity,
+      image: item.product.images[0] || "",
+    }));
+
+    const totalAmount = orderItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+
+    const order = await Order.create({
+      user: req.user._id,
+      items: orderItems,
+      totalAmount,
+      shippingAddress,
+      paymentId,
+      paymentStatus: "paid",
+      orderStatus: "placed",
+    });
+
+    // Clear the cart after order is placed
+    cart.items = [];
+    await cart.save();
+
+    // Send confirmation email (don't block response if it fails)
+    sendOrderEmail(req.user.email, req.user.name, order._id, "Placed");
+
+    res.status(201).json(order);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// GET logged-in user's orders
+export const getMyOrders = async (req, res) => {
+  try {
+    const orders = await Order.find({ user: req.user._id }).sort({ createdAt: -1 });
+    res.json(orders);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// GET all orders (admin)
+export const getAllOrders = async (req, res) => {
+  try {
+    const orders = await Order.find().populate("user", "name email").sort({ createdAt: -1 });
+    res.json(orders);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// UPDATE order status (admin)
+export const updateOrderStatus = async (req, res) => {
+  try {
+    const { orderStatus } = req.body;
+
+    const order = await Order.findById(req.params.id).populate("user", "name email");
+    if (!order) return res.status(404).json({ message: "Order not found" });
+
+    order.orderStatus = orderStatus;
+    await order.save();
+
+    sendOrderEmail(order.user.email, order.user.name, order._id, orderStatus);
+
+    res.json(order);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+</file>
+
+<file path="server/controllers/paymentController.js">
+import Razorpay from "razorpay";
+import crypto from "crypto";
+import dotenv from "dotenv";
+dotenv.config();
+
+const razorpay = new Razorpay({
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_KEY_SECRET,
+});
+
+// Create a Razorpay order (this happens BEFORE payment)
+export const createRazorpayOrder = async (req, res) => {
+  try {
+    const { amount } = req.body; // amount in rupees
+
+    const options = {
+      amount: Math.round(amount * 100), // Razorpay needs paise (smallest unit)
+      currency: "INR",
+      receipt: `receipt_${Date.now()}`,
+    };
+
+    const order = await razorpay.orders.create(options);
+
+    res.json({
+      orderId: order.id,
+      amount: order.amount,
+      currency: order.currency,
+      keyId: process.env.RAZORPAY_KEY_ID, // frontend needs this to open checkout
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// Verify payment signature (this happens AFTER payment, before saving the order)
+export const verifyPayment = async (req, res) => {
+  try {
+    const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+
+    const body = razorpay_order_id + "|" + razorpay_payment_id;
+
+    const expectedSignature = crypto
+      .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
+      .update(body)
+      .digest("hex");
+
+    const isValid = expectedSignature === razorpay_signature;
+
+    if (isValid) {
+      res.json({ verified: true, paymentId: razorpay_payment_id });
+    } else {
+      res.status(400).json({ verified: false, message: "Payment verification failed" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+</file>
+
+<file path="server/controllers/productController.js">
+import Product from "../models/Product.js";
+
+// CREATE product (admin only)
+export const createProduct = async (req, res) => {
+  try {
+    const { name, description, price, category, stock } = req.body;
+
+    const imageUrls = req.files ? req.files.map((file) => file.path) : [];
+
+    const product = await Product.create({
+      name,
+      description,
+      price,
+      category,
+      stock,
+      images: imageUrls,
+      createdBy: req.user._id,
+    });
+
+    res.status(201).json(product);
+  } catch (error) {
+    console.error("CREATE PRODUCT ERROR:", error);
+    res.status(500).json({ message: error.message || "Something went wrong" });
+  }
+};
+
+// GET all products (public, with search/filter/pagination)
+export const getProducts = async (req, res) => {
+  try {
+    const { search, category, minPrice, maxPrice, page = 1, limit = 12 } = req.query;
+
+    let filter = {};
+
+    if (search) {
+      filter.name = { $regex: search, $options: "i" }; // case-insensitive search
+    }
+    if (category) {
+      filter.category = category;
+    }
+    if (minPrice || maxPrice) {
+      filter.price = {};
+      if (minPrice) filter.price.$gte = Number(minPrice);
+      if (maxPrice) filter.price.$lte = Number(maxPrice);
+    }
+
+    const products = await Product.find(filter)
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .sort({ createdAt: -1 });
+
+    const count = await Product.countDocuments(filter);
+
+    res.json({
+      products,
+      totalPages: Math.ceil(count / limit),
+      currentPage: Number(page),
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// GET single product
+export const getProductById = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    if (!product) return res.status(404).json({ message: "Product not found" });
+    res.json(product);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// UPDATE product (admin only)
+export const updateProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    if (!product) return res.status(404).json({ message: "Product not found" });
+
+    const { name, description, price, category, stock } = req.body;
+
+    product.name = name || product.name;
+    product.description = description || product.description;
+    product.price = price || product.price;
+    product.category = category || product.category;
+    product.stock = stock || product.stock;
+
+    if (req.files && req.files.length > 0) {
+      product.images = req.files.map((file) => file.path);
+    }
+
+    const updatedProduct = await product.save();
+    res.json(updatedProduct);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// DELETE product (admin only)
+export const deleteProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    if (!product) return res.status(404).json({ message: "Product not found" });
+
+    await product.deleteOne();
+    res.json({ message: "Product deleted" });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+</file>
+
+<file path="server/controllers/wishlistController.js">
+import Wishlist from "../models/Wishlist.js";
+
+export const getWishlist = async (req, res) => {
+  try {
+    let wishlist = await Wishlist.findOne({ user: req.user._id }).populate("products");
+    if (!wishlist) {
+      wishlist = await Wishlist.create({ user: req.user._id, products: [] });
+    }
+    res.json(wishlist);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export const toggleWishlist = async (req, res) => {
+  try {
+    const { productId } = req.body;
+
+    let wishlist = await Wishlist.findOne({ user: req.user._id });
+    if (!wishlist) {
+      wishlist = await Wishlist.create({ user: req.user._id, products: [] });
+    }
+
+    const exists = wishlist.products.includes(productId);
+
+    if (exists) {
+      wishlist.products = wishlist.products.filter((id) => id.toString() !== productId);
+    } else {
+      wishlist.products.push(productId);
+    }
+
+    await wishlist.save();
+    const populated = await wishlist.populate("products");
+    res.json(populated);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+</file>
+
+<file path="server/middleware/authMiddleware.js">
+import jwt from "jsonwebtoken";
+import User from "../models/User.js";
+
+export const protect = async (req, res, next) => {
+  let token;
+
+  if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
+    try {
+      token = req.headers.authorization.split(" ")[1];
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      req.user = await User.findById(decoded.id).select("-password");
+      next();
+    } catch (error) {
+      res.status(401).json({ message: "Not authorized, token failed" });
+    }
+  }
+
+  if (!token) {
+    res.status(401).json({ message: "Not authorized, no token" });
+  }
+};
+
+export const admin = (req, res, next) => {
+  if (req.user && req.user.role === "admin") {
+    next();
+  } else {
+    res.status(403).json({ message: "Not authorized as admin" });
+  }
+};
+</file>
+
+<file path="server/models/Cart.js">
+import mongoose from "mongoose";
+
+const cartItemSchema = new mongoose.Schema({
+  product: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true },
+  quantity: { type: Number, required: true, default: 1 },
+});
+
+const cartSchema = new mongoose.Schema(
+  {
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, unique: true },
+    items: [cartItemSchema],
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Cart", cartSchema);
+</file>
+
+<file path="server/models/Order.js">
+import mongoose from "mongoose";
+
+const orderItemSchema = new mongoose.Schema({
+  product: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true },
+  name: { type: String, required: true },
+  price: { type: Number, required: true },
+  quantity: { type: Number, required: true },
+  image: { type: String },
+});
+
+const orderSchema = new mongoose.Schema(
+  {
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+    items: [orderItemSchema],
+    totalAmount: { type: Number, required: true },
+    shippingAddress: {
+      fullName: String,
+      address: String,
+      city: String,
+      postalCode: String,
+      country: String,
+      phone: String,
+    },
+    paymentId: { type: String }, // Stripe payment intent ID
+    paymentStatus: {
+      type: String,
+      enum: ["pending", "paid", "failed"],
+      default: "pending",
+    },
+    orderStatus: {
+      type: String,
+      enum: ["placed", "processing", "shipped", "delivered", "cancelled"],
+      default: "placed",
+    },
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Order", orderSchema);
+</file>
+
+<file path="server/models/Product.js">
+import mongoose from "mongoose";
+
+const productSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+    price: { type: Number, required: true },
+    category: { type: String, required: true },
+    stock: { type: Number, required: true, default: 0 },
+    images: [{ type: String }], // array of Cloudinary URLs
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Product", productSchema);
+</file>
+
+<file path="server/models/User.js">
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    role: { type: String, enum: ["user", "admin"], default: "user" },
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("User", userSchema);
+</file>
+
+<file path="server/models/Wishlist.js">
+import mongoose from "mongoose";
+
+const wishlistSchema = new mongoose.Schema(
+  {
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, unique: true },
+    products: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Wishlist", wishlistSchema);
+</file>
+
+<file path="server/routes/aiRoutes.js">
+import express from "express";
+import { protect, admin } from "../middleware/authMiddleware.js";
+import { generateDescription } from "../controllers/aiController.js";
+
+const router = express.Router();
+
+router.post("/generate-description", protect, admin, generateDescription);
+
+export default router;
+</file>
+
+<file path="server/routes/authRoutes.js">
+import express from "express";
+import { registerUser, loginUser } from "../controllers/authController.js";
+
+const router = express.Router();
+
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+
+export default router;
+</file>
+
+<file path="server/routes/cartRoutes.js">
+import express from "express";
+import { protect } from "../middleware/authMiddleware.js";
+import { getCart, addToCart, removeFromCart, syncCart } from "../controllers/cartController.js";
+
+const router = express.Router();
+
+router.get("/", protect, getCart);
+router.post("/add", protect, addToCart);
+router.post("/sync", protect, syncCart);
+router.delete("/:productId", protect, removeFromCart);
+
+export default router;
+</file>
+
+<file path="server/routes/chatRoutes.js">
+import express from "express";
+import { chatWithSupport } from "../controllers/chatController.js";
+import jwt from "jsonwebtoken";
+import User from "../models/User.js";
+
+const router = express.Router();
+
+// Optional auth - works whether logged in or not, but attaches user if token exists
+const optionalAuth = async (req, res, next) => {
+  const authHeader = req.headers.authorization;
+  if (authHeader && authHeader.startsWith("Bearer")) {
+    try {
+      const token = authHeader.split(" ")[1];
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      req.user = await User.findById(decoded.id).select("-password");
+    } catch (error) {
+      // Invalid token, just proceed without user
+    }
+  }
+  next();
+};
+
+router.post("/", optionalAuth, chatWithSupport);
+
+export default router;
+</file>
+
+<file path="server/routes/orderRoutes.js">
+import express from "express";
+import { protect, admin } from "../middleware/authMiddleware.js";
+import {
+  createOrder,
+  getMyOrders,
+  getAllOrders,
+  updateOrderStatus,
+} from "../controllers/orderController.js";
+
+const router = express.Router();
+
+router.post("/", protect, createOrder);
+router.get("/my-orders", protect, getMyOrders);
+router.get("/", protect, admin, getAllOrders);
+router.put("/:id/status", protect, admin, updateOrderStatus);
+
+export default router;
+</file>
+
+<file path="server/routes/paymentRoutes.js">
+import express from "express";
+import { protect } from "../middleware/authMiddleware.js";
+import { createRazorpayOrder, verifyPayment } from "../controllers/paymentController.js";
+
+const router = express.Router();
+
+router.post("/create-order", protect, createRazorpayOrder);
+router.post("/verify", protect, verifyPayment);
+
+export default router;
+</file>
+
+<file path="server/routes/productRoutes.js">
+import express from "express";
+import multer from "multer";
+import { storage } from "../config/cloudinary.js";
+import { protect, admin } from "../middleware/authMiddleware.js";
+import {
+  createProduct,
+  getProducts,
+  getProductById,
+  updateProduct,
+  deleteProduct,
+} from "../controllers/productController.js";
+
+const router = express.Router();
+const upload = multer({ storage });
+
+router.get("/", getProducts);
+router.get("/:id", getProductById);
+
+router.post("/", protect, admin, upload.array("images", 5), createProduct);
+router.put("/:id", protect, admin, upload.array("images", 5), updateProduct);
+router.delete("/:id", protect, admin, deleteProduct);
+
+export default router;
+</file>
+
+<file path="server/routes/wishlistRoutes.js">
+import express from "express";
+import { protect } from "../middleware/authMiddleware.js";
+import { getWishlist, toggleWishlist } from "../controllers/wishlistController.js";
+
+const router = express.Router();
+
+router.get("/", protect, getWishlist);
+router.post("/toggle", protect, toggleWishlist);
+
+export default router;
+</file>
+
+<file path="server/services/emailService.js">
+import SibApiV3Sdk from "sib-api-v3-sdk";
+import dotenv from "dotenv";
+dotenv.config();
+
+const defaultClient = SibApiV3Sdk.ApiClient.instance;
+const apiKey = defaultClient.authentications["api-key"];
+apiKey.apiKey = process.env.BREVO_API_KEY;
+
+const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+
+export const sendOrderEmail = async (toEmail, toName, orderId, status) => {
+  try {
+    const sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
+
+    sendSmtpEmail.subject = `Order Update: ${status}`;
+    sendSmtpEmail.htmlContent = `
+      <h2>Hi ${toName},</h2>
+      <p>Your order <strong>#${orderId}</strong> status has been updated to: <strong>${status}</strong>.</p>
+      <p>Thank you for shopping with us!</p>
+    `;
+    sendSmtpEmail.sender = { name: "Ecommerce Store", email: process.env.BREVO_SENDER_EMAIL };
+    sendSmtpEmail.to = [{ email: toEmail, name: toName }];
+
+    await apiInstance.sendTransacEmail(sendSmtpEmail);
+    console.log("Email sent successfully");
+  } catch (error) {
+    console.error("Email sending failed:", error.message);
+  }
+};
+</file>
+
+<file path="client/src/api/axiosInstance.js">
+import axios from "axios";
+
+const axiosInstance = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+});
+
+// Attach token automatically to every request if it exists
+axiosInstance.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+export default axiosInstance;
+</file>
+
+<file path="client/src/api/productApi.js">
+import axiosInstance from "./axiosInstance";
+
+export const getProducts = (params) => axiosInstance.get("/products", { params });
+export const getProductById = (id) => axiosInstance.get(`/products/${id}`);
+export const createProduct = (formData) =>
+  axiosInstance.post("/products", formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+</file>
+
+<file path="client/src/components/Footer.jsx">
+const Footer = () => (
+  <footer className="footer">
+    <div className="footer-grid">
+      <div className="footer-col">
+        <h4>Ecommerce Store</h4>
+        <p style={{ color: "rgba(255,255,255,.65)", fontSize: "13px", maxWidth: "220px" }}>
+          Quality products, fast delivery, secure payments.
+        </p>
+      </div>
+      <div className="footer-col">
+        <h4>Shop</h4>
+        <a href="/products">All Products</a>
+        <a href="/cart">Cart</a>
+        <a href="/wishlist">Wishlist</a>
+      </div>
+      <div className="footer-col">
+        <h4>Account</h4>
+        <a href="/orders">My Orders</a>
+        <a href="/login">Login</a>
+      </div>
+    </div>
+    <div className="footer-bottom">© 2026 Ecommerce Store — Built with the MERN stack</div>
+  </footer>
+);
+
+export default Footer;
+</file>
+
+<file path="client/src/components/Navbar.jsx">
+import { useState, useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import { useCart } from "../context/CartContext";
+import { useTheme } from "../context/ThemeContext";
+
+const Navbar = () => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const { cartCount } = useCart();
+  const { dark, toggleTheme } = useTheme();
+
+
+  const getInitial = (name) => name?.charAt(0).toUpperCase() || "U";
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+    setMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <nav className="navbar">
+      <Link to="/" className="navbar-logo">🛍️ Ecommerce</Link>
+
+      <div className="navbar-links">
+        <Link to="/">Home</Link>
+        <Link to="/products">Products</Link>
+
+        {user ? (
+          <>
+           <Link to="/cart" className="cart-link">
+  🛒 Cart
+  {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+</Link>
+            <button className="theme-toggle" onClick={toggleTheme}>{dark ? "☀️" : "🌙"}</button>
+            <div className="user-menu" ref={menuRef}>
+              <button className="user-menu-trigger" onClick={() => setMenuOpen(!menuOpen)}>
+                <div className="user-avatar">{getInitial(user.name)}</div>
+                <span>{user.name}</span>
+                <span className="chevron">{menuOpen ? "▲" : "▼"}</span>
+              </button>
+
+              {menuOpen && (
+                <div className="user-dropdown">
+                  <div className="user-dropdown-header">
+                    <div className="user-avatar" style={{ width: 40, height: 40, fontSize: 16 }}>
+                      {getInitial(user.name)}
+                    </div>
+                    <div>
+                      <p className="user-dropdown-name">{user.name}</p>
+                      <p className="user-dropdown-email">{user.email}</p>
+                    </div>
+                  </div>
+                  <Link to="/orders" className="user-dropdown-item" onClick={() => setMenuOpen(false)}>
+                    📦 My Orders
+                  </Link>
+                  <Link to="/wishlist" className="user-dropdown-item" onClick={() => setMenuOpen(false)}>
+                    💛 Wishlist
+                  </Link>
+                  {user.role === "admin" && (
+                    <Link to="/admin" className="user-dropdown-item" onClick={() => setMenuOpen(false)}>
+                      🛠️ Admin Dashboard
+                    </Link>
+                  )}
+                  <button className="user-dropdown-item logout-item" onClick={handleLogout}>
+                    🚪 Sign Out
+                  </button>
+                </div>
+              )}
+            </div>
+          </>
+        ) : (
+          <>
+            <Link to="/login">Login</Link>
+            <Link to="/register" className="btn btn-primary">Register</Link>
+          </>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
+</file>
+
+<file path="client/src/components/ProductCard.jsx">
+import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { toggleWishlist } from "../api/wishlistApi";
+import { useAuth } from "../context/AuthContext";
+
+const ProductCard = ({ product }) => {
+  const { user } = useAuth();
+
+  const handleWishlistClick = async (e) => {
+    e.preventDefault();
+    if (!user) {
+      toast.error("Please login to use wishlist");
+      return;
+    }
+    try {
+      await toggleWishlist(product._id);
+      toast.success("Wishlist updated");
+    } catch (error) {
+      toast.error("Failed to update wishlist");
+    }
+  };
+
+  // Deterministic fake rating from product id, so it's consistent (not random per render)
+  const seed = product._id.charCodeAt(product._id.length - 1);
+  const rating = (4 + (seed % 10) / 10).toFixed(1);
+  const reviewCount = 30 + (seed % 15) * 17;
+
+  return (
+    <div className="product-card">
+      <button className="wishlist-btn" onClick={handleWishlistClick}>♥</button>
+      <Link to={`/products/${product._id}`}>
+        <div className="product-card-img-wrap">
+          <img src={product.images[0] || "https://via.placeholder.com/220"} alt={product.name} />
+        </div>
+       <div className="product-card-body">
+  <p className="product-card-name">{product.name}</p>
+  <p className="product-card-category">{product.category}</p>
+  <p className="product-card-stars">{"⭐".repeat(Math.round(rating))} <span>({reviewCount})</span></p>
+  <p className="product-card-price">
+    ₹{product.price}
+    <span className="strike-price">₹{Math.round(product.price * 1.25)}</span>
+    <span className="discount-badge">20% OFF</span>
+  </p>
+  <p className="free-delivery">🚚 Free Delivery</p>
+</div>
+      </Link>
+    </div>
+  );
+};
+
+export default ProductCard;
+</file>
+
+<file path="client/src/pages/AdminDashboard.jsx">
+import { useState, useEffect } from "react";
+import toast from "react-hot-toast";
+import { getAllOrders, updateOrderStatus } from "../api/adminApi";
+import { Link } from "react-router-dom";
+const statusOptions = ["placed", "processing", "shipped", "delivered", "cancelled"];
+
+const AdminDashboard = () => {
+  const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchOrders();
+  }, []);
+
+  const fetchOrders = async () => {
+    try {
+      const res = await getAllOrders();
+      setOrders(res.data);
+    } catch (error) {
+      toast.error("Failed to load orders");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleStatusChange = async (orderId, newStatus) => {
+    try {
+      await updateOrderStatus(orderId, newStatus);
+      setOrders((prev) =>
+        prev.map((order) =>
+          order._id === orderId ? { ...order, orderStatus: newStatus } : order
+        )
+      );
+      toast.success("Order status updated — email sent to customer");
+    } catch (error) {
+      toast.error("Failed to update status");
+    }
+  };
+
+ if (loading) return <div className="page-container"><div className="spinner"></div></div>;
+
+ return (
+  <div className="page-container">
+    <h1 className="section-title">Admin — All Orders</h1>
+    <Link to="/admin/add-product" className="btn btn-primary" style={{ marginBottom: "20px", display: "inline-block" }}>
+  + Add New Product
+</Link>
+
+    {orders.length === 0 ? (
+      <p>No orders yet.</p>
+    ) : (
+      <table className="admin-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {orders.map((order) => (
+            <tr key={order._id}>
+              <td>#{order._id.slice(-8)}</td>
+              <td>
+                {order.user?.name} <br />
+                <span style={{ color: "var(--text-muted)", fontSize: "13px" }}>{order.user?.email}</span>
+              </td>
+              <td>
+                {order.items.map((item) => (
+                  <div key={item._id}>{item.name} × {item.quantity}</div>
+                ))}
+              </td>
+              <td>₹{order.totalAmount}</td>
+              <td>{new Date(order.createdAt).toLocaleDateString()}</td>
+              <td>
+                <select
+                  value={order.orderStatus}
+                  onChange={(e) => handleStatusChange(order._id, e.target.value)}
+                  style={{ padding: "6px 10px", borderRadius: "6px", border: "1px solid var(--border)" }}
+                >
+                  {statusOptions.map((status) => (
+                    <option key={status} value={status}>{status}</option>
+                  ))}
+                </select>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    )}
+  </div>
+);
+};
+
+export default AdminDashboard;
+</file>
+
+<file path="client/src/pages/Home.jsx">
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { getProducts } from "../api/productApi";
+import ProductCard from "../components/ProductCard";
+import SkeletonCard from "../components/SkeletonCard";
+
+const Home = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchFeatured();
+  }, []);
+
+  const fetchFeatured = async () => {
+    try {
+      const res = await getProducts({ limit: 4, page: 1 });
+      setProducts(res.data.products);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div>
+      <div className="hero hero-premium">
+  <div className="hero-content">
+    <h1>Shop Smarter.</h1>
+    <p>Discover thousands of products with lightning-fast delivery.</p>
+    <div className="hero-cta-group">
+      <Link to="/products"><button className="btn btn-primary">Explore Products</button></Link>
+      <Link to="/products"><button className="btn btn-outline hero-outline">View Deals</button></Link>
+    </div>
+  </div>
+  <div className="hero-images">
+    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300" alt="Laptop" className="hero-float hero-float-1" />
+    <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=300" alt="Phone" className="hero-float hero-float-2" />
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" alt="Shoes" className="hero-float hero-float-3" />
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Headphones" className="hero-float hero-float-4" />
+  </div>
+</div>
+
+      <div className="page-container">
+        <h2 className="section-title">Featured Products</h2>
+        {loading ? (
+          <div className="product-grid">
+            {Array.from({ length: 4 }).map((_, i) => <SkeletonCard key={i} />)}
+          </div>
+        ) : (
+          <div className="product-grid">
+            {products.map((product) => (
+              <ProductCard key={product._id} product={product} />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+</file>
+
+<file path="client/src/App.jsx">
+import { Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import Navbar from "./components/Navbar";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import Orders from "./pages/Orders";
+import AdminDashboard from "./pages/AdminDashboard";
+import Wishlist from "./pages/Wishlist";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import AdminAddProduct from "./pages/AdminAddProduct";
+import ChatWidget from "./components/ChatWidget";
+
+function App() {
+  return (
+    <div>
+      <Toaster
+  position="top-center"
+  toastOptions={{
+    style: {
+      background: "#2b2d42",
+      color: "#fff",
+      fontSize: "13.5px",
+      borderRadius: "10px",
+      padding: "10px 16px",
+    },
+    success: { iconTheme: { primary: "#06d6a0", secondary: "#fff" } },
+    error: { iconTheme: { primary: "#ff6b35", secondary: "#fff" } },
+  }}
+/>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route
+        path="/cart"
+        element={
+          <ProtectedRoute>
+          <Cart />
+          </ProtectedRoute>
+         }
+        />
+        <Route
+  path="/checkout"
+  element={
+    <ProtectedRoute>
+      <Checkout />
+    </ProtectedRoute>
+  }
+/> 
+      <Route
+  path="/orders"
+  element={
+    <ProtectedRoute>
+      <Orders />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/admin"
+  element={
+    <ProtectedRoute adminOnly={true}>
+      <AdminDashboard />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/wishlist"
+  element={
+    <ProtectedRoute>
+      <Wishlist />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/admin/add-product"
+  element={
+    <ProtectedRoute adminOnly={true}>
+      <AdminAddProduct />
+    </ProtectedRoute>
+  }
+/>
+      </Routes>
+      <Footer />
+      <ChatWidget />
+    </div>
+  
+  );
+}
+
+export default App;
+</file>
+
+<file path="client/src/main.jsx">
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
+import App from "./App.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
+import { CartProvider } from "./context/CartContext.jsx";
+import { ThemeProvider } from "./context/ThemeContext.jsx";
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <BrowserRouter>
+      <AuthProvider>
+        <CartProvider>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </CartProvider>
+      </AuthProvider>
+    </BrowserRouter>
+  </StrictMode>
+);
+</file>
+
+<file path="client/.gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.env
+</file>
+
+<file path="server/package.json">
+{
+  "name": "server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^1.41.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "groq-sdk": "^1.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.7.4",
+    "multer": "^2.2.0",
+    "multer-storage-cloudinary": "^4.0.0",
+    "razorpay": "^2.9.8",
+    "sib-api-v3-sdk": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
+</file>
+
+<file path=".gitignore">
+node_modules/
+.env
+.DS_Store
+dist/
+client/.env
+</file>
+
+<file path="README.md">
+# 🛍️ Ecommerce Store — Full-Stack MERN Application
+
+A full-featured e-commerce platform built with the MERN stack, featuring product catalog with search & filters, cart & wishlist, secure checkout with Razorpay payments, order tracking, and an admin dashboard — deployed live.
+
+**🔗 Live Demo:** https://ecommerce-app-inky-eight.vercel.app/
+**🔗 Backend API:** https://ecommerce-api-bnhe.onrender.com/api/health
+
+> Note: Backend is hosted on Render's free tier, which spins down after inactivity — the first request may take up to 50 seconds to respond.
+
+## Features
+
+- **Authentication:** JWT-based register/login with role-based access (user/admin)
+- **Product Catalog:** Search, category filters, pagination, image uploads via Cloudinary
+- **Cart & Wishlist:** Persistent per-user cart with quantity management
+- **Checkout & Payments:** Real payment integration with Razorpay, including signature verification for security
+- **Order Management:** Order history for customers, full order management for admins
+- **Email Notifications:** Automated order status emails via Brevo
+- **Admin Dashboard:** View all orders, update order status, manage inventory
+
+## Tech Stack
+
+**Frontend:** React, React Router, Axios, React Hot Toast, Vite
+**Backend:** Node.js, Express, MongoDB, Mongoose, JWT, bcrypt
+**Services:** Cloudinary (image hosting), Razorpay (payments), Brevo (transactional email)
+**Deployment:** Vercel (frontend), Render (backend), MongoDB Atlas (database)
+
+## Architecture
+
+**client/** — React frontend (Vite)
+- `src/api/` — Axios API call functions
+- `src/components/` — Reusable UI components
+- `src/context/` — Auth & Cart global state
+- `src/pages/` — Route-level page components
+
+**server/** — Express backend
+- `controllers/` — Route logic
+- `models/` — Mongoose schemas
+- `routes/` — API endpoints
+- `middleware/` — Auth & admin guards
+- `services/` — Email service
+
+## Key Implementation Details
+
+- **Payment security:** Razorpay payments are verified server-side using HMAC SHA256 signature verification before an order is created — prevents client-side payment spoofing.
+- **Order snapshotting:** Order line items store the product's name/price/image at time of purchase (not a live reference), so historical orders remain accurate even if product data changes later.
+- **Cart sync:** Guest cart (localStorage) merges with the server-side cart on login.
+- **Role-based middleware:** Admin-only routes protected both on the backend (Express middleware) and frontend (protected routes).
+
+## Running Locally
+
+**Backend:**
+```bash
+cd server
+npm install
+# Create a .env file with: MONGO_URI, JWT_SECRET, CLOUDINARY_*, RAZORPAY_*, BREVO_*
+npm run dev
+```
+
+**Frontend:**
+```bash
+cd client
+npm install
+# Create a .env file with: VITE_API_URL=http://localhost:5000/api
+npm run dev
+```
+</file>
+
+<file path="client/src/index.css">
+:root {
+  --primary: #ff6b35;
+  --primary-dark: #e5502a;
+  --secondary: #2b2d42;
+  --accent: #06d6a0;
+  --bg: #f8f9fb;
+  --card-bg: #ffffff;
+  --border: #ececf1;
+  --text: #1a1a2e;
+  --text-muted: #6b7280;
+  --success: #06d6a0;
+  --danger: #ef4444;
+  --radius: 14px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+html {
+  font-size: 15px;
+}
+
+body {
+  font-size: 0.95rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+input, select {
+  font-family: inherit;
+}
+
+.page-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.navbar-logo {
+  font-size: 18px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), #ff8c5a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.navbar-links a {
+  color: var(--text-muted);
+  transition: color 0.15s ease;
+  position: relative;
+}
+
+.navbar-links a:hover {
+  color: var(--primary);
+}
+
+.navbar-user {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 14px;
+  background: #fff3ee;
+  border-radius: 20px;
+}
+
+.btn {
+  padding: 11px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255, 107, 53, 0.45);
+}
+
+.btn-primary:disabled {
+  background: #d1d1db;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--border) !important;
+  color: var(--text);
+}
+
+.btn-outline:hover {
+  background: #f3f4f6;
+  border-color: var(--primary) !important;
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--danger);
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-danger:hover {
+  background: #fef2f2;
+}
+
+/* Product grid & cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  background: #f3f4f6;
+}
+
+.product-card-body {
+  padding: 16px;
+}
+
+.product-card-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.product-card-category {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--primary-dark);
+  background: #fff3ee;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.product-card-price {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: white;
+  border: none !important;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: var(--shadow);
+  z-index: 2;
+}
+
+.wishlist-btn:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Forms */
+.form-container {
+  max-width: 380px;
+  margin: 32px auto;
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+}
+
+.form-container h2 {
+  margin-bottom: 21px;
+  font-size: 26px;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  margin-bottom: 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.form-input:focus {
+  border-color: var(--primary);
+}
+
+.form-link {
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.form-link a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Hero */
+.hero {
+  padding: 90px 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #2b2d42 0%, #1a1a2e 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,107,53,0.25) 0%, transparent 70%);
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.hero p {
+  font-size: 15px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.hero .btn-primary {
+  padding: 9px 18px;
+  font-size: 13px;
+  position: relative;
+}
+
+.section-title {
+  font-size: 19px;
+  margin-bottom: 22px;
+}
+
+/* Product detail page */
+.detail-layout {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.detail-image {
+  width: 420px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+}
+
+.detail-info h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.detail-price {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 14px 0;
+}
+
+.stock-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.stock-in {
+  background: #e6faf4;
+  color: var(--success);
+}
+
+.stock-out {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.qty-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.qty-selector input {
+  width: 60px;
+  padding: 8px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Cart */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+}
+
+.cart-item img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.qty-control button {
+  background: none;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.qty-control button:hover {
+  color: var(--primary);
+}
+
+.cart-summary {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Orders */
+.order-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+}
+
+.status-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: #fff3ee;
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Admin table */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 16px;
+  background: var(--secondary);
+  color: white;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.admin-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tr:hover td {
+  background: #fafafa;
+}
+
+/* Search/filter bar */
+.filter-bar {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+}
+
+.filter-bar input {
+  flex: 1;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: var(--primary);
+}
+/* Navbar user avatar */
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 6px;
+  background: #fff3ee;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--text);
+}
+
+.user-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Footer */
+.footer {
+  background: var(--secondary);
+  color: rgba(255,255,255,0.7);
+  padding: 40px 30px;
+  text-align: center;
+  font-size: 13.5px;
+  margin-top: 60px;
+}
+
+.footer strong {
+  color: white;
+}
+
+/* Empty states */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-muted);
+}
+
+.empty-state-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+/* Badges for category filter chips */
+.category-pills {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.category-pill {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: white;
+  border: 1.5px solid var(--border);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.category-pill.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.category-pill:hover:not(.active) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Loading spinner */
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 60px auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+/* User dropdown menu */
+.user-menu {
+  position: relative;
+}
+
+.user-menu-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 6px;
+  background: #fff3ee;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--text);
+}
+
+.user-menu-trigger:hover {
+  background: #ffe6d9;
+}
+
+.chevron {
+  font-size: 8px;
+  color: var(--text-muted);
+  margin-left: 2px;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 240px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: var(--shadow-hover);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  z-index: 200;
+  animation: dropdownFade 0.15s ease;
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.user-dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #fafafa;
+  border-bottom: 1px solid var(--border);
+}
+
+.user-dropdown-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.user-dropdown-email {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.user-dropdown-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--text);
+  background: none;
+  border-radius: 0;
+}
+
+.user-dropdown-item:hover {
+  background: #fff3ee;
+}
+
+.logout-item {
+  border-top: 1px solid var(--border);
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.logout-item:hover {
+  background: #fef2f2;
+}
+.cart-link {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -14px;
+  background: var(--primary);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-card-img-wrap {
+  overflow: hidden;
+}
+
+.product-card-img-wrap img {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.product-card-rating {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0 0 6px;
+}
+
+.product-card-rating span {
+  color: var(--text-muted);
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 0;
+}
+
+.skeleton-line {
+  height: 12px;
+  margin-bottom: 8px;
+}
+.breadcrumbs {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary);
+}
+
+.breadcrumbs span {
+  color: var(--text);
+  font-weight: 500;
+}
+/* Chat widget */
+.chat-bubble {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+  z-index: 999;
+  transition: transform 0.2s ease;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.08);
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 340px;
+  height: 460px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-hover);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 998;
+  animation: chatSlideUp 0.2s ease;
+}
+
+@keyframes chatSlideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--secondary), #1a1a2e);
+  color: white;
+}
+
+.chat-header-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.chat-header-title {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.chat-header-subtitle {
+  margin: 0;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fafafa;
+}
+
+.chat-message {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.chat-message-user {
+  align-self: flex-end;
+  background: var(--primary);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-message-assistant {
+  align-self: flex-start;
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-bottom-left-radius: 4px;
+}
+
+.chat-typing {
+  display: flex;
+  gap: 4px;
+  padding: 14px;
+}
+
+.chat-typing span {
+  width: 6px;
+  height: 6px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  animation: typingBounce 1.2s infinite;
+}
+
+.chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+.chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-6px); }
+}
+
+.chat-input-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--border);
+  background: white;
+}
+
+.chat-input-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  font-size: 13px;
+  outline: none;
+}
+
+.chat-input-form input:focus {
+  border-color: var(--primary);
+}
+
+.chat-input-form button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.chat-input-form button:disabled {
+  background: #d1d1db;
+}
+[data-theme="dark"] {
+  --bg: #14151f;
+  --card-bg: #1e202e;
+  --border: #2c2e40;
+  --text: #f0f0f5;
+  --text-muted: #9797a8;
+}
+[data-theme="dark"] .hero { background: linear-gradient(135deg, #0f1020, #1a1a2e); }
+[data-theme="dark"] .wishlist-btn { background: #1e202e; }
+[data-theme="dark"] .navbar { background: var(--card-bg); }
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: 1.5px solid var(--border) !important;
+  border-radius: 20px;
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+
+/* Premium hero upgrade */
+.hero { position: relative; padding: 100px 30px; }
+.hero h1 { font-size: 48px; line-height: 1.15; }
+.hero p { font-size: 18px; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+/* Product card polish */
+.product-card { transition: box-shadow .3s, transform .3s; }
+.product-card:hover { box-shadow: 0 16px 32px rgba(0,0,0,.14); transform: translateY(-6px); }
+
+/* Buttons */
+.btn { transition: transform .15s ease, box-shadow .15s ease; }
+.btn:active { transform: scale(0.97); }
+
+/* Footer upgrade */
+.footer { padding: 50px 30px 30px; }
+.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; max-width: 1200px; margin: 0 auto 30px; text-align: left; }
+.footer-col h4 { color: white; font-size: 14px; margin-bottom: 12px; }
+.footer-col a { display: block; color: rgba(255,255,255,.65); font-size: 13px; margin-bottom: 8px; }
+.footer-col a:hover { color: var(--primary); }
+.footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px; font-size: 12.5px; }
+
+/* Typography */
+body { line-height: 1.55; }
+h1, h2, h3 { line-height: 1.25; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar { padding: 14px 18px; flex-wrap: wrap; gap: 10px; }
+  .navbar-links { gap: 14px; font-size: 13px; }
+  .hero h1 { font-size: 30px; }
+  .hero p { font-size: 14px; }
+  .detail-layout { flex-direction: column; }
+  .detail-image { width: 100%; height: 300px; }
+  .product-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .chat-window { width: 90vw; right: 5vw; }
+}
+/* Hero premium */
+.hero-premium {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #2b2d42 50%, #ff6b35 150%);
+  flex-wrap: wrap;
+}
+.hero-content { text-align: left; max-width: 480px; }
+.hero-content p { margin-left: 0; }
+.hero-cta-group { display: flex; gap: 14px; }
+.hero-outline { background: transparent; color: white; border-color: rgba(255,255,255,.4) !important; }
+.hero-outline:hover { background: rgba(255,255,255,.1); }
+.hero-images { position: relative; width: 320px; height: 260px; flex-shrink: 0; }
+.hero-float { position: absolute; width: 130px; height: 130px; object-fit: cover; border-radius: 16px; box-shadow: 0 12px 30px rgba(0,0,0,.35); animation: heroFloat 4s ease-in-out infinite; }
+.hero-float-1 { top: 0; left: 0; animation-delay: 0s; }
+.hero-float-2 { top: 10px; right: 0; animation-delay: .5s; }
+.hero-float-3 { bottom: 0; left: 40px; animation-delay: 1s; }
+.hero-float-4 { bottom: 10px; right: 30px; animation-delay: 1.5s; }
+@keyframes heroFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@media (max-width: 900px) { .hero-premium { flex-direction: column; text-align: center; } .hero-content { text-align: center; } .hero-cta-group { justify-content: center; } .hero-images { display: none; } }
+
+/* Product card extras */
+.product-card-stars { font-size: 11px; margin: 0 0 6px; }
+.product-card-stars span { color: var(--text-muted); font-size: 11px; }
+.product-card-price { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.strike-price { font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 400; }
+.discount-badge { background: #e6faf4; color: var(--success); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+.free-delivery { font-size: 11px; color: var(--text-muted); margin: 4px 0 0; }
+
+/* Button gradient/hover polish */
+.btn-outline:hover { transform: translateY(-1px); }
+</file>
+
+<file path="server/index.js">
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import dotenv from "dotenv";
+import authRoutes from "./routes/authRoutes.js";
+import productRoutes from "./routes/productRoutes.js";
+import cartRoutes from "./routes/cartRoutes.js";
+import wishlistRoutes from "./routes/wishlistRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
+import paymentRoutes from "./routes/paymentRoutes.js";
+import aiRoutes from "./routes/aiRoutes.js";
+import chatRoutes from "./routes/chatRoutes.js";
+
+dotenv.config();
+
+const app = express();
+
+app.use(cors({
+  origin: ["http://localhost:5173", "https://ecommerce-app-inky-eight.vercel.app/"],
+  credentials: true,
+}));
+app.use(express.json());
+
+app.get("/api/health", (req, res) => {
+  res.json({ status: "Server is running" });
+});
+
+app.use("/api/auth", authRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/cart", cartRoutes);
+app.use("/api/wishlist", wishlistRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api/payment", paymentRoutes);
+app.use("/api/ai", aiRoutes);
+app.use("/api/chat", chatRoutes);
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Global error handler - catches anything that slips through
+app.use((err, req, res, next) => {
+  console.error("GLOBAL ERROR HANDLER:", err);
+  res.status(500).json({ message: err.message || "Server error" });
+});
+</file>
+
+</files>
