@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import { getMyOrders } from "../api/orderApi";
+import { generateInvoice } from "../utils/generateInvoice";
+import OrderTimeline from "../components/OrderTimeline";
+import { useAuth } from "../context/AuthContext";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { user } = useAuth();
 
   useEffect(() => {
     fetchOrders();
@@ -55,9 +59,19 @@ const Orders = () => {
           </div>
         ))}
 
+        <OrderTimeline status={order.orderStatus} />
+
         <p style={{ textAlign: "right", fontWeight: "bold", marginTop: "10px" }}>
           Total: ₹{order.totalAmount}
         </p>
+
+        {order.orderStatus === "delivered" && (
+          <div style={{ textAlign: "right", marginTop: "8px" }}>
+            <button className="btn btn-outline" onClick={() => generateInvoice(order, user)}>
+              📄 Download Invoice
+            </button>
+          </div>
+        )}
       </div>
     ))}
   </div>
