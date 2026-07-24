@@ -15,6 +15,9 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import AdminAddProduct from "./pages/AdminAddProduct";
 import ChatWidget from "./components/ChatWidget";
+import AdminOverview from "./pages/AdminOverview";
+import AdminInventory from "./pages/AdminInventory";
+import AdminUsers from "./pages/AdminUsers";
 
 function App() {
   return (
@@ -69,6 +72,30 @@ function App() {
   element={
     <ProtectedRoute adminOnly={true}>
       <AdminDashboard />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/admin/overview"
+  element={
+    <ProtectedRoute adminOnly={true}>
+      <AdminOverview />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/admin/inventory"
+  element={
+    <ProtectedRoute adminOnly={true}>
+      <AdminInventory />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/admin/users"
+  element={
+    <ProtectedRoute adminOnly={true}>
+      <AdminUsers />
     </ProtectedRoute>
   }
 />
