@@ -6,3 +6,9 @@ export const createProduct = (formData) =>
   axiosInstance.post("/products", formData, {
     headers: { "Content-Type": "multipart/form-data" },
   });
+export const updateProduct = (id, formData) =>
+  axiosInstance.put(`/products/${id}`, formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+
+export const deleteProduct = (id) => axiosInstance.delete(`/products/${id}`);
