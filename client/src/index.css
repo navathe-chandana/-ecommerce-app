@@ -1554,7 +1554,7 @@ h1, h2, h3 { line-height: 1.25; }
 .voice-search-btn {
   position: absolute;
   right: 8px;
-  top: 50%;
+  top: -20px;
   transform: translateY(-50%);
   background: none;
   width: 32px;
