@@ -38,6 +38,7 @@ const Navbar = () => {
       <div className="navbar-links">
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
+        <Link to="/ai">✨ AI Hub</Link>
 
         {user ? (
           <>
