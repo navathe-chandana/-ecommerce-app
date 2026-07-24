@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import VoiceSearchButton from "../components/VoiceSearchButton";
+import ImageSearchModal from "../components/ImageSearchModal";
 import { getProducts } from "../api/productApi";
 import ProductCard from "../components/ProductCard";
 import SkeletonCard from "../components/SkeletonCard";
+
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -18,7 +21,7 @@ const Products = () => {
   const [inStockOnly, setInStockOnly] = useState(false);
   const [discountOnly, setDiscountOnly] = useState(false);
   const [sortBy, setSortBy] = useState("relevance");
-
+  const [showImageSearch, setShowImageSearch] = useState(false);
   useEffect(() => {
     fetchProducts();
   }, [search, category, page]);
@@ -100,8 +103,24 @@ const Products = () => {
                   </div>
                 </Link>
               ))}
+             
             </div>
           )}
+           <VoiceSearchButton
+  onResult={(text) => {
+    setSearch(text);
+    setPage(1);
+    fetchSuggestions(text);
+  }}
+/>
+        <button
+  type="button"
+  className="image-search-trigger"
+  onClick={() => setShowImageSearch(true)}
+  title="Search by image"
+>
+  📷
+</button>
         </div>
         <select className="sort-select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
           <option value="relevance">Sort: Relevance</option>
@@ -188,6 +207,7 @@ const Products = () => {
         <span>Page {page} of {totalPages}</span>
         <button className="btn btn-outline" disabled={page === totalPages || totalPages === 0} onClick={() => setPage(page + 1)}>Next</button>
       </div>
+      {showImageSearch && <ImageSearchModal onClose={() => setShowImageSearch(false)} />}
     </div>
   );
 };

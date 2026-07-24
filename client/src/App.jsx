@@ -14,7 +14,8 @@ import Wishlist from "./pages/Wishlist";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import AdminAddProduct from "./pages/AdminAddProduct";
-import ChatWidget from "./components/ChatWidget";
+import AIAssistantLauncher from "./components/AIAssistantLauncher";
+import AIHub from "./pages/AIHub";
 import AdminOverview from "./pages/AdminOverview";
 import AdminInventory from "./pages/AdminInventory";
 import AdminUsers from "./pages/AdminUsers";
@@ -115,9 +116,10 @@ function App() {
     </ProtectedRoute>
   }
 />
+      <Route path="/ai" element={<AIHub />} />
       </Routes>
       <Footer />
-      <ChatWidget />
+      <AIAssistantLauncher />
     </div>
   
   );
