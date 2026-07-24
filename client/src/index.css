@@ -1268,3 +1268,86 @@ h1, h2, h3 { line-height: 1.25; }
   font-weight: 700;
   color: var(--secondary);
 }
+.cart-layout { display: flex; gap: 30px; align-items: flex-start; }
+.cart-items-col { flex: 1; }
+.cart-summary-col { width: 320px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px; }
+
+.cart-item-actions { display: flex; flex-direction: column; gap: 6px; margin-left: 10px; }
+.cart-wishlist-btn { font-size: 11.5px; padding: 6px 10px; white-space: nowrap; }
+
+.coupon-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+.coupon-box h4 { margin: 0 0 10px; font-size: 14px; }
+.coupon-form { display: flex; gap: 8px; }
+.coupon-form input { flex: 1; padding: 10px 12px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 13px; outline: none; }
+.coupon-form input:focus { border-color: var(--primary); }
+.coupon-hint { font-size: 11px; color: var(--text-muted); margin: 10px 0 0; }
+
+.coupon-applied { display: flex; justify-content: space-between; align-items: center; background: #e6faf4; padding: 10px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--success); }
+
+.summary-row { display: flex; justify-content: space-between; font-size: 13.5px; margin-bottom: 10px; color: var(--text-muted); }
+.summary-discount span:last-child { color: var(--success); }
+.summary-total { border-top: 1px solid var(--border); padding-top: 12px; font-size: 16px; font-weight: 800; color: var(--text); }
+
+@media (max-width: 900px) {
+  .cart-layout { flex-direction: column; }
+  .cart-summary-col { width: 100%; }
+}
+/* Stepper */
+.stepper { display: flex; align-items: center; margin-bottom: 30px; max-width: 700px; }
+.stepper-item { display: flex; align-items: center; flex: 1; position: relative; }
+.stepper-circle { width: 32px; height: 32px; border-radius: 50%; background: var(--border); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+.stepper-active { background: var(--primary); color: white; }
+.stepper-done { background: var(--success); color: white; cursor: pointer; }
+.stepper-label { font-size: 11px; color: var(--text-muted); margin-left: 8px; white-space: nowrap; }
+.stepper-label-active { color: var(--text); font-weight: 700; }
+.stepper-line { flex: 1; height: 2px; background: var(--border); margin: 0 8px; }
+.stepper-line-done { background: var(--success); }
+
+/* Checkout panels */
+.checkout-step-body { max-width: 600px; }
+.checkout-panel { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; }
+.checkout-nav { display: flex; justify-content: space-between; max-width: 600px; }
+
+/* Address */
+.address-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.address-card { border: 1.5px solid var(--border); border-radius: 12px; padding: 14px; cursor: pointer; position: relative; transition: border-color 0.15s ease; }
+.address-card-selected { border-color: var(--primary); background: #fff3ee; }
+.address-default-badge { position: absolute; top: 10px; right: 10px; font-size: 10px; padding: 3px 10px; }
+.address-card-name { font-weight: 700; font-size: 13.5px; margin: 0 0 4px; }
+.address-card-text { font-size: 12px; color: var(--text-muted); margin: 0 0 2px; }
+.address-card-actions { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+.address-card-btn { padding: 5px 10px; font-size: 11px; }
+
+.address-form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
+.address-form-row { display: flex; gap: 10px; }
+.address-form-actions { display: flex; gap: 10px; }
+
+/* Payment method */
+.payment-method-card { display: flex; justify-content: space-between; align-items: center; border: 1.5px solid var(--border); border-radius: 10px; padding: 14px 16px; font-size: 14px; }
+.payment-method-selected { border-color: var(--primary); background: #fff3ee; }
+
+.review-block { margin-bottom: 18px; }
+.review-block h4 { margin: 0 0 8px; font-size: 13px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em; }
+
+.confirmation-panel { text-align: center; }
+
+@media (max-width: 700px) {
+  .stepper-label { display: none; }
+  .address-form-row { flex-direction: column; }
+}
+/* Order timeline */
+.order-timeline { display: flex; align-items: center; margin: 16px 0; overflow-x: auto; padding-bottom: 4px; }
+.timeline-step { display: flex; align-items: center; flex-shrink: 0; }
+.timeline-dot { width: 22px; height: 22px; border-radius: 50%; background: var(--border); color: white; display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; }
+.timeline-dot-done { background: var(--success); }
+.timeline-dot-current { background: var(--primary); box-shadow: 0 0 0 4px #fff3ee; }
+.timeline-label { font-size: 10px; color: var(--text-muted); margin: 0 6px; white-space: nowrap; }
+.timeline-label-current { color: var(--primary); font-weight: 700; }
+.timeline-connector { width: 24px; height: 2px; background: var(--border); flex-shrink: 0; }
+.timeline-connector-done { background: var(--success); }
+.order-cancelled-badge { color: var(--danger); font-weight: 700; font-size: 13px; margin: 12px 0; }
+
+/* Payment options */
+.payment-options { display: flex; flex-direction: column; gap: 10px; }
+.payment-method-card { cursor: pointer; }
+.payment-method-card:hover { border-color: var(--primary); }
